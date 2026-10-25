@@ -1,0 +1,13 @@
+[package]
+name = "GraviLens"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+eframe = "0.37.0"
+image = { version = "0.25.10", default-features = false, features = ["jpeg", "png"] }
+rfd = "0.17.2"
+
+# Las dependencias (decodificar la foto, egui) van optimizadas incluso en modo debug.
+[profile.dev.package."*"]
+opt-level = 3
